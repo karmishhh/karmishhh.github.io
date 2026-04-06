@@ -1,81 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Your Name</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Kartik Mishra</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="js/main.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <a href="index.html" class="logo">Kartik Mishra</a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="publications.html">Publications</a>
-                <a href="cv.html">CV</a>
-                <a href="hobbies.html">Hobbies & Books</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container">
-        <h1>Curriculum Vitae</h1>
-        <a href="your-cv.pdf" class="download-link" download>Download PDF Version</a>
-
-        <section>
-            <h2>Education</h2>
-            <div class="cv-item">
-                <h3>B.Tech. in Biotechnology</h3>
-                <p class="institution">Amity University, Noida</p>
-                <p class="date">2017 - 2021</p>
-                <p>GPA: 8.15/10 (with Distinction)</p>
-            </div>
-        </section>
-
-        <section>
-            <h2>Experience</h2>
-            <div class="cv-item">
-                <h3>Machine Learning Engineer</h3>
-                <p class="institution">Airtel</p>
-                <p class="date">August 2025 - present</p>
-                <ul>
-                    <li>Key responsibility or achievement</li>
-                    <li>Another significant contribution</li>
-                    <li>Impact or result of your work</li>
-                </ul>
-            </div>
-            <div class="cv-item">
-                <h3>Associate Analytics & Model Analyst</h3>
-                <p class="institution">Moody's Insurance Solutions</p>
-                <p class="date">April 2023 - August 2025</p>
-                <ul>
-                    <li>Main responsibility</li>
-                    <li>Project or achievement</li>
-                </ul>
-            </div>
-            <div class="cv-item">
-                <h3>Data Associate</h3>
-                <p class="institution">Wood Mackenzie</p>
-                <p class="date">November 2021 - March 2023</p>
-                <ul>
-                    <li>Main responsibility</li>
-                    <li>Project or achievement</li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <h2>Skills</h2>
-            <div class="cv-item">
-                <p><strong>Programming Languages:</strong> Python, R, JavaScript</p>
-                <p><strong>Tools/Libraries:</strong> Pyspark, Git, Docker, Langchain, Hadoop, Jenkins, Dagster, Postgres, MongoDB, SQL, Django, PowerBI, Tableau, MS Office, Linux OS</p>
-                <p><strong>Languages:</strong> English (Fluent), Hindi (Native)</p>
-            </div>
-        </section>
-
+  <header>
+    <div class="header-content">
+      <a href="index.html" class="logo">Kartik Mishra</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="publications.html">Publications</a>
+        <a href="cv.html" class="active">CV</a>
+        <a href="books.html">Books</a>
+        <button class="theme-toggle" aria-label="Toggle dark mode"></button>
+      </nav>
     </div>
+  </header>
+
+  <div class="container">
+    <h1>Curriculum Vitae</h1>
+    <div style="margin-bottom: 2.5rem; margin-top: 0.5rem;">
+      <a href="your-cv.pdf" class="btn" download>Download PDF</a>
+    </div>
+
+    <section class="cv-section">
+      <h2>Experience</h2>
+
+      <div class="cv-item">
+        <h3>Machine Learning Engineer</h3>
+        <div class="institution">Airtel</div>
+        <div class="date">August 2025 &ndash; Present</div>
+        <ul>
+          <li>Key responsibility or achievement</li>
+          <li>Another significant contribution</li>
+          <li>Impact or result of your work</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <h3>Associate Analytics &amp; Model Analyst</h3>
+        <div class="institution">Moody's Insurance Solutions</div>
+        <div class="date">April 2023 &ndash; August 2025</div>
+        <ul>
+          <li>Main responsibility</li>
+          <li>Project or achievement</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <h3>Data Associate</h3>
+        <div class="institution">Wood Mackenzie</div>
+        <div class="date">November 2021 &ndash; March 2023</div>
+        <ul>
+          <li>Main responsibility</li>
+          <li>Project or achievement</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Education</h2>
+
+      <div class="cv-item">
+        <h3>B.Tech. in Biotechnology</h3>
+        <div class="institution">Amity University, Noida</div>
+        <div class="date">2017 &ndash; 2021</div>
+        <p>GPA: 8.15/10 (with Distinction)</p>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Skills</h2>
+      <div class="skills">
+        <p><strong>Programming:</strong> Python, R, JavaScript</p>
+        <p><strong>Tools &amp; Frameworks:</strong> PySpark, Git, Docker, LangChain, Hadoop, Jenkins, Dagster, PostgreSQL, MongoDB, SQL, Django, Power BI, Tableau</p>
+        <p><strong>Languages:</strong> English (Fluent), Hindi (Native)</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <span>kartik876.km@gmail.com</span>
+      <div class="footer-links">
+        <a href="https://github.com/karmishhh/" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/kartik-mishra99/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
