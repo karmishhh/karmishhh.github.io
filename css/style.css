@@ -302,6 +302,12 @@ section {
   font-weight: 500;
 }
 
+.cv-item .company-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
 .cv-item .date {
   font-size: 0.85rem;
   color: var(--text-muted);
