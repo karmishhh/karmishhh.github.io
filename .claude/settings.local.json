@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(start \"\" \"f:/2025_projects/karmishhh.github.io/books.html\")",
-      "Bash(git config:*)"
-    ]
-  }
-}
