@@ -27,105 +27,126 @@
   </header>
 
   <div class="container">
-    <h1>Curriculum Vitae</h1>
-    <div style="margin-bottom: 2.5rem; margin-top: 0.5rem;">
+    <div class="cv-doc-actions">
       <a href="Kartik_Mishra_CV.pdf" class="btn" download>Download PDF</a>
     </div>
 
+    <div class="cv-doc-header">
+      <h1 class="cv-name">KARTIK MISHRA</h1>
+      <div class="cv-contact">
+        <a href="mailto:kartik876.km@gmail.com">Kartik876.km@gmail.com</a>
+        <span class="sep">|</span>
+        +91-8826118975
+        <span class="sep">|</span>
+        <a href="https://www.linkedin.com/in/kartik-mishra99/" target="_blank">LinkedIn</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/karmishhh/" target="_blank">Github</a>
+        <span class="sep">|</span>
+        <a href="index.html">Portfolio</a>
+      </div>
+    </div>
+
     <section class="cv-section">
-      <h2>Experience</h2>
+      <h2>Education</h2>
+      <div class="cv-item">
+        <div class="cv-item-row">
+          <div class="cv-item-institution">Amity University, Noida, India</div>
+          <div class="cv-item-meta">Aug 2017 &ndash; Mar 2021</div>
+        </div>
+        <div class="cv-item-row">
+          <div class="cv-item-role">B.Tech. Biotechnology</div>
+          <div class="cv-item-meta">CGPA: 8.15/10</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cv-section">
+      <h2>Work Experience</h2>
 
       <div class="cv-item">
-        <h3>Machine Learning Engineer</h3>
-        <div class="institution">Bharti Airtel Limited, Gurugram</div>
-        <div class="company-desc">One of India’s largest telecom providers serving 650M+ customers globally across 17 countries with 21.56B USD revenue and 24,420 employees.</div>
-        <div class="date">August 2025 &ndash; Present</div>
+        <div class="cv-item-row">
+          <div class="cv-item-company">BHARTI AIRTEL</div>
+          <div class="cv-item-location">Gurugram, India</div>
+        </div>
+        <div class="cv-item-row">
+          <div class="cv-item-role">Machine Learning Engineer</div>
+          <div class="cv-item-meta">Aug 2025 &ndash; Present</div>
+        </div>
         <ul>
-          <li>Designed and built a real-time conversational voice bot that helps field engineers resolve broadband complaints at customer premises &mdash; architecting a Meta OmniASR (STT), Qwen3.5 (LLM), and Voxtral (TTS) turn-taking loop in LangGraph across decision, agent, and communication nodes, achieving sub-1,000 ms round-trip latency. Built the asynchronous FastAPI microservices and a MongoDB-backed priority call queue and state machine to manage concurrent live calls over Airtel IQ WebSocket telephony.</li>
+          <li>Designed and built a real-time conversational voice bot that helps field engineers resolve broadband complaints at customer premises &ndash; architecting Meta&rsquo;s OmniASR (STT), Qwen3.5 (LLM) and Voxtral (TTS) turn-taking loop in LangGraph across decision, agent, and communication nodes, achieving sub-1,000 ms round-trip latency. Built the asynchronous FastAPI microservices and a MongoDB-backed priority call queue and state machine to manage concurrent live calls over Airtel IQ WebSocket telephony.</li>
           <li>Finetuned Meta's Omnilingual ASR (OmniASR 1B/3B) and Whisper-Apex for Hindi/Hinglish speech, engineering a &micro;-law + noise augmentation pipeline that injected real noise profiles mined from in-house customer call recordings into clean training data to match production telephony conditions; reached ~18.9% WER / ~9.0% UER on a held-out validation set.</li>
-          <li>Engineered the ASR serving infrastructure across two lanes &mdash; OmniASR (wav2vec2 + LLM-prefix) on a dedicated NVIDIA Triton lane and Whisper-Apex on vLLM &mdash; with a real-time audio front-end using Silero VAD for speech segmentation and DeepFilterNet noise suppression, plus bandwidth-extension stages to close a confirmed 8&rarr;16 kHz telephony audio ceiling.</li>
-          <li>Revamped the WCL stack (2G/4G/5G) and built the team's first Docker-based Apache Airflow, CI/CD-enabled orchestration &mdash; migrating pipelines between PySpark and pandas by workload profile and orchestrating 20+ ETL workflows as SME, cutting runtime 75% and compute cost 85%.</li>
-          <li>Leading nationwide Duct operations across 12+ states &mdash; a business-critical program directly affecting customer network performance, traffic, and tower/cell operations &mdash; as tech lead and primary SME/POC coordinating cross-functional teams India-wide; deployed a real-time monitoring dashboard that eliminated manual inspections and gave stakeholders instant operational visibility.</li>
+          <li>Engineered the ASR serving infrastructure across two lanes &ndash; OmniASR (wav2vec2 + LLM-prefix) on a dedicated Nvidia&rsquo;s Triton lane and Whisper-Apex on vLLM &ndash; with a real-time audio front-end using Silero VAD for speech segmentation and DeepFilterNet noise suppression, plus bandwidth-extension stages to close a confirmed 8&rarr;16 kHz telephony audio ceiling.</li>
+          <li>Revamped the WCL stack (2G/4G/5G) and built the team's first Docker-based Apache Airflow, CI/CD-enabled orchestration &ndash; migrating pipelines between PySpark and pandas by workload profile and orchestrating 20+ ETL workflows as SME, cutting runtime 75% and compute cost 85%.</li>
+          <li>Leading nationwide Duct operations across 12+ states &ndash; a business-critical program directly affecting customer network performance, traffic, and tower/cell operations &ndash; as tech lead and primary SME/POC coordinating cross-functional teams India-wide; deployed a real-time monitoring dashboard that eliminated manual inspections and gave stakeholders instant operational visibility.</li>
           <li>Built large-scale PySpark pipelines processing terabytes of broadband customer data daily across India, generating network-health KPIs, churn signals, and CX metrics for Airtel's flagship Broadband Experience initiative.</li>
         </ul>
       </div>
 
       <div class="cv-item">
-        <h3>Associate Analytics &amp; Model Analyst</h3>
-        <div class="institution">Moody's Insurance Solutions, Noida</div>
-        <div class="company-desc">Provides catastrophe models and risk intelligence for insurers, with 7.09B USD revenue and a workforce of 15,838.</div>
-        <div class="date">April 2023 &ndash; August 2025</div>
+        <div class="cv-item-row">
+          <div class="cv-item-company">MOODY&rsquo;S INSURANCE SOLUTIONS</div>
+          <div class="cv-item-location">Noida, India</div>
+        </div>
+        <div class="cv-item-row">
+          <div class="cv-item-role">Associate Analytics, Model Analyst</div>
+          <div class="cv-item-meta">Apr 2023 &ndash; Aug 2025</div>
+        </div>
         <ul>
           <li>Architected an end-to-end data orchestration framework on Dagster, integrating high-frequency weather data from 30+ global sources with CI/CD automation via Jenkins and GitHub Actions, improving pipeline efficiency by 90%.</li>
-          <li>Implemented a Django-based data visualization dashboard using Mapbox, JavaScript, MongoDB, and Python, enabling global wind station tracking and cross-referencing with the Postgres database to identify over 18,000 missing stations.</li>
-          <li>Collaborated with the Event Response team to automate Support Center uploads via an API, reducing manual upload time from 40&dash;60 minutes to zero, enhancing efficiency for natural disaster reports and forecasts.</li>
-          <li>Built an HWind statistics dashboard using JavaScript, Python, and Django, tracking daily and weekly data feed counts with interactive charts to identify problematic transactions and feed downtimes.</li>
+          <li>Implemented a Django-based data visualization dashboard using Mapbox, JavaScript, MongoDB, and Python, enabling global wind station tracking and cross-referencing with the Postgres database to identify over 18,000 missing stations</li>
+          <li>Collaborated with the Event Response team to automate Support Center uploads via an API, reducing manual upload time from 40&ndash;60 minutes to zero, enhancing efficiency for natural disaster reports and forecasts</li>
+          <li>Unlocked Visibility into HWind processes by building insightful statistics dashboard using JavaScript, Python, and Django, tracking daily and weekly data feed counts with interactive charts, identifying any problematic data transactions and feed downtimes.</li>
         </ul>
       </div>
 
       <div class="cv-item">
-        <h3>Data Associate</h3>
-        <div class="institution">Verisk Analytics (Wood Mackenzie), Gurugram</div>
-        <div class="company-desc">Global insight business for renewable energy, & natural resources, with 1.9B USD revenue and 2000+ employees.</div>
-        <div class="date">November 2021 &ndash; April 2023</div>
+        <div class="cv-item-row">
+          <div class="cv-item-company">VERISK ANALYTICS (Wood Mackenzie)</div>
+          <div class="cv-item-location">Gurugram, India</div>
+        </div>
+        <div class="cv-item-row">
+          <div class="cv-item-role">Data Associate</div>
+          <div class="cv-item-meta">Nov 2021 &ndash; Apr 2023</div>
+        </div>
         <ul>
-          <li>Enhanced data collection and processing pipelines in Python on AWS SageMaker, improving efficiency by 60%.</li>
+          <li>Enhanced data collection and processing pipelines in Python on AWS SageMaker, improving efficiency by 60%</li>
           <li>Built Python automation scripts to extract oil price data from country reports, update Excel deliverables, and trigger email notifications on completion, reducing end-to-end processing time by 90%.</li>
-          <li>Mentored 5 new team members on codebases, workflows, and tooling; led cross-team project handovers managing roadmaps and task allocation via JIRA.</li>
-          <li>Built a Power BI dashboard tracking project delivery metrics across the team, improving visibility into bottlenecks and task completion rates.</li>
+          <li>Led project handover sessions with different teams, managed project roadmaps, story allocation, and task division using JIRA</li>
+          <li>Crafted a Power BI dashboard to monitor JIRA tickets and track completion statistics, fostering team accountability and ensuring timely task fulfillment; implemented JIRA tickets for day-to-day tasks assigned to individual team members</li>
         </ul>
       </div>
     </section>
 
-    <section class="cv-section">
-      <h2>Education</h2>
+    <!-- Publications section injected here by build script (from publications.html) -->
 
-      <div class="cv-item">
-        <h3>B.Tech. in Biotechnology</h3>
-        <div class="institution">Amity University, Noida</div>
-        <div class="date">August 2017 &ndash; March 2021</div>
-        <p>CGPA: 8.15/10</p>
+    <section class="cv-section">
+      <h2>Extracurricular Activities</h2>
+
+      <div class="cv-extra-item">
+        <p><strong>Member &amp; AVP Education, Toastmasters Club, West Delhi</strong> &ndash; Organized weekly meetings, speaker selection, and onboarded new members (Apr 2023 &ndash; Mar 2025)</p>
+      </div>
+
+      <div class="cv-extra-item">
+        <p><strong>Volunteer &amp; Drive Lead, Robin Hood Army, Delhi</strong> &ndash; Led 30+ food distribution drives and taught 25+ students weekly (Oct 2022 &ndash; Present)</p>
+      </div>
+
+      <div class="cv-extra-item">
+        <p><strong>Coordinator, CRC Placement Cell, Amity University</strong> &ndash; Orchestrated 100+ on-campus placement drives and pre-placement prep sessions (Feb 2019 &ndash; Mar 2021)</p>
       </div>
     </section>
 
     <section class="cv-section">
       <h2>Skills</h2>
       <div class="skills">
-        <p><strong>Languages:</strong> Python, SQL, JavaScript</p>
-        <p><strong>Big Data:</strong> Apache PySpark, Pandas, Hadoop, HDFS, YARN, Delta Lake</p>
-        <p><strong>Orchestration & DevOps:</strong> Apache Airflow, Docker, Docker Compose, Dagster, Jenkins, GitHub Actions, Bitbucket</p>
-        <p><strong>ML/AI:</strong> PyTorch, Transformers, HuggingFace, LangGraph, LangChain, LLMs, Speech-to-Text/Text-to-Speech (STT/TTS), ASR finetuning, OmniASR, Whisper, DeepFilterNet, Silero VAD, noise suppression</p>
-        <p><strong>Model Serving:</strong> Triton Inference Server, vLLM</p>
-        <p><strong>Backend & Web:</strong> FastAPI, Django, Streamlit, WebSockets</p>
-        <p><strong>Databases:</strong> PostgreSQL, MongoDB</p>
-        <p><strong>BI & Visualization:</strong> Power BI, Tableau</p>
-        <p><strong>Tools:</strong> Git, Linux, Paramiko, AWS SageMaker</p>
-        <p><strong>Spoken:</strong> English (Proficient), Hindi (Native)</p>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <h2>Extracurricular</h2>
-
-      <div class="cv-item">
-        <h3>Member &amp; AVP Education</h3>
-        <div class="institution">Toastmasters Club, West Delhi</div>
-        <div class="date">April 2023 &ndash; March 2025</div>
-        <p>Organized weekly meetings, speaker selection, and onboarded new members.</p>
-      </div>
-
-      <div class="cv-item">
-        <h3>Volunteer &amp; Drive Lead</h3>
-        <div class="institution">Robin Hood Army, Delhi</div>
-        <div class="date">October 2022 &ndash; Present</div>
-        <p>Led 30+ food distribution drives and taught 25+ students weekly.</p>
-      </div>
-
-      <div class="cv-item">
-        <h3>Coordinator</h3>
-        <div class="institution">CRC Placement Cell, Amity University</div>
-        <div class="date">February 2019 &ndash; March 2021</div>
-        <p>Orchestrated 100+ on-campus placement drives and pre-placement prep sessions.</p>
+        <p><strong>Languages</strong>: Python, SQL</p>
+        <p><strong>Big Data</strong>: Apache PySpark, Pandas, Hadoop, HDFS, YARN, Delta Lake</p>
+        <p><strong>Orchestration</strong>: Apache Airflow, Docker, Docker Compose, Dagster, Jenkins, GitHub Actions, Bitbucket</p>
+        <p><strong>ML/AI</strong>: PyTorch, Transformers, HuggingFace, LangGraph, LangChain, LLMs, Speech-to-Text/Text-to-Speech (STT/TTS), ASR finetuning, OmniASR, Whisper, DeepFilterNet, Silero VAD, noise suppression</p>
+        <p><strong>Backend &amp; Web</strong>: FastAPI, Streamlit, WebSockets, Django</p>
+        <p><strong>Databases</strong>: PostgreSQL, MongoDB</p>
+        <p><strong>Visualization</strong>: Django, Power BI, Tableau</p>
+        <p><strong>Tools</strong>: Power BI, Tableau, Git, Linux, Paramiko, AWS SageMaker</p>
+        <p><strong>Spoken</strong>: English (Proficient), Hindi (Native)</p>
       </div>
     </section>
   </div>
