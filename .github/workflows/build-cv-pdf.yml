@@ -1,0 +1,48 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'cv.html'
+      - 'publications.html'
+      - 'css/**'
+      - 'js/**'
+      - '.github/workflows/build-cv-pdf.yml'
+      - '.github/scripts/render-cv-pdf.js'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Playwright + Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+
+      - name: Render CV PDF
+        run: node .github/scripts/render-cv-pdf.js
+
+      - name: Commit updated PDF
+        run: |
+          if [[ -n "$(git status --porcelain Kartik_Mishra_CV.pdf)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add Kartik_Mishra_CV.pdf
+            git commit -m "chore: rebuild CV PDF [skip ci]"
+            git push
+          else
+            echo "PDF unchanged; nothing to commit."
+          fi
