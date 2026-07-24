@@ -761,10 +761,8 @@ footer {
     text-align: justify;
   }
 
-  /* Extracurricular — always start on a fresh page */
+  /* Extracurricular — keep the section together */
   .cv-extracurricular {
-    break-before: page;
-    page-break-before: always;
     break-inside: avoid;
     page-break-inside: avoid;
   }
@@ -803,6 +801,8 @@ footer {
   .cv-publications {
     padding: 0;
     margin-left: 0;
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .cv-publications .item {
