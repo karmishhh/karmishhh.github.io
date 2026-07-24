@@ -324,6 +324,14 @@ section {
   margin-bottom: 2rem;
 }
 
+.cv-summary p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: none;
+  margin-bottom: 0;
+}
+
 .cv-item {
   margin-bottom: 1.5rem;
 }
@@ -689,6 +697,16 @@ footer {
   }
 
   .cv-section { margin-bottom: 0.35rem; }
+
+  /* Summary */
+  .cv-summary p {
+    font-size: 9.75pt;
+    line-height: 1.35;
+    margin: 0;
+    color: #000;
+    max-width: none;
+    text-align: justify;
+  }
 
   /* Job / education entries */
   .cv-item {

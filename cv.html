@@ -47,6 +47,11 @@
       </div>
     </div>
 
+    <section class="cv-section cv-summary">
+      <h2>Summary</h2>
+      <p>Machine learning engineer working on real-time voice AI in Indian telecom. Currently at Airtel, owning the ASR fine-tuning, serving stack, and async orchestration behind a live broadband voice agent hitting sub-1,000 ms STT-&gt;LLM-&gt;TTS latency on Airtel IQ. Four prior years across Moody's and Verisk building PySpark data platforms at terabyte scale, Airflow-based orchestration, and Python + Django tooling. Also author of three peer-reviewed publications in computational biology (Nature Scientific Reports, PeerJ, SSRN).</p>
+    </section>
+
     <section class="cv-section">
       <h2>Education</h2>
       <div class="cv-item">
@@ -74,12 +79,12 @@
           <div class="cv-item-meta">Aug 2025 &ndash; Present</div>
         </div>
         <ul>
-          <li>Built a production real-time voice agent for broadband field diagnostics, hitting sub-1,000 ms round-trip latency across a full STT&rarr;LLM&rarr;TTS turn-taking loop orchestrated in LangGraph; live on Airtel IQ telephony handling concurrent calls.</li>
+          <li>Built a production real-time voice agent for broadband field diagnostics, hitting sub-1,000 ms round-trip latency across a full STT-&gt;LLM-&gt;TTS turn-taking loop orchestrated in LangGraph; live on Airtel IQ telephony handling concurrent calls.</li>
           <li>Fine-tuned [ASR model, 1B/3B] for Hindi/Hinglish telephony speech to 18.9% WER / 9.0% UER, via a &micro;-law + noise-augmentation pipeline that injected real noise profiles mined from in-house call recordings into clean training data to match production conditions.</li>
-          <li>Owned the ASR serving stack end to end &mdash; dual-lane inference on Triton and vLLM, with Silero VAD segmentation, DeepFilterNet suppression, and bandwidth extension to close a confirmed 8&rarr;16 kHz telephony audio ceiling.</li>
+          <li>Owned the ASR serving stack end to end - dual-lane inference on Triton and vLLM, with Silero VAD segmentation, DeepFilterNet suppression, and bandwidth extension to close a confirmed 8-&gt;16 kHz telephony audio ceiling.</li>
           <li>Designed the async serving layer: FastAPI microservices, WebSocket audio streaming, and a MongoDB-backed priority queue and call state machine managing concurrent live sessions.</li>
-          <li>Rebuilt the telecom data platform (2G/4G/5G) on Docker-based Airflow with CI/CD, orchestrating 20+ PySpark/pandas ETL workflows over terabyte-scale daily broadband data &mdash; 75% faster, 85% lower compute cost.</li>
-          <li>Leading nationwide Duct operations across 12+ states &ndash; a business-critical program directly affecting customer network performance, traffic, and tower/cell operations &ndash; as tech lead and primary SME/POC coordinating cross-functional teams India-wide; deployed a real-time monitoring dashboard that eliminated manual inspections and gave stakeholders instant operational visibility.</li>
+          <li>Rebuilt the telecom data platform (2G/4G/5G) on Docker-based Airflow with CI/CD, orchestrating 20+ PySpark/pandas ETL workflows over terabyte-scale daily broadband data - 75% faster, 85% lower compute cost.</li>
+          <li>Leading nationwide Duct operations across 12+ states - a business-critical program directly affecting customer network performance, traffic, and tower/cell operations - as tech lead and primary SME/POC coordinating cross-functional teams India-wide; deployed a real-time monitoring dashboard that eliminated manual inspections and gave stakeholders instant operational visibility.</li>
           <li>Built large-scale PySpark pipelines processing terabytes of broadband customer data daily across India, generating network-health KPIs, churn signals, and CX metrics for Airtel's flagship Broadband Experience initiative.</li>
         </ul>
       </div>
@@ -128,15 +133,15 @@
       <h2>Extracurricular Activities</h2>
 
       <div class="cv-extra-item">
-        <p><strong>Member &amp; AVP Education, Toastmasters Club, West Delhi</strong> &ndash; Organized weekly meetings, speaker selection, and onboarded new members (Apr 2023 &ndash; Mar 2025)</p>
+        <p><strong>Member &amp; AVP Education, Toastmasters Club, West Delhi</strong> - Organized weekly meetings, speaker selection, and onboarded new members (Apr 2023 &ndash; Mar 2025)</p>
       </div>
 
       <div class="cv-extra-item">
-        <p><strong>Volunteer &amp; Drive Lead, Robin Hood Army, Delhi</strong> &ndash; Led 30+ food distribution drives and taught 25+ students weekly (Oct 2022 &ndash; Present)</p>
+        <p><strong>Volunteer &amp; Drive Lead, Robin Hood Army, Delhi</strong> - Led 30+ food distribution drives and taught 25+ students weekly (Oct 2022 &ndash; Present)</p>
       </div>
 
       <div class="cv-extra-item">
-        <p><strong>Coordinator, CRC Placement Cell, Amity University</strong> &ndash; Orchestrated 100+ on-campus placement drives and pre-placement prep sessions (Feb 2019 &ndash; Mar 2021)</p>
+        <p><strong>Coordinator, CRC Placement Cell, Amity University</strong> - Orchestrated 100+ on-campus placement drives and pre-placement prep sessions (Feb 2019 &ndash; Mar 2021)</p>
       </div>
     </section>
 
