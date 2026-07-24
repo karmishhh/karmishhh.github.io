@@ -73,10 +73,11 @@
           <div class="cv-item-meta">Aug 2025 &ndash; Present</div>
         </div>
         <ul>
-          <li>Designed and built a real-time conversational voice bot that helps field engineers resolve broadband complaints at customer premises &ndash; architecting Meta&rsquo;s OmniASR (STT), Qwen3.5 (LLM) and Voxtral (TTS) turn-taking loop in LangGraph across decision, agent, and communication nodes, achieving sub-1,000 ms round-trip latency. Built the asynchronous FastAPI microservices and a MongoDB-backed priority call queue and state machine to manage concurrent live calls over Airtel IQ WebSocket telephony.</li>
-          <li>Finetuned Meta's Omnilingual ASR (OmniASR 1B/3B) and Whisper-Apex for Hindi/Hinglish speech, engineering a &micro;-law + noise augmentation pipeline that injected real noise profiles mined from in-house customer call recordings into clean training data to match production telephony conditions; reached ~18.9% WER / ~9.0% UER on a held-out validation set.</li>
-          <li>Engineered the ASR serving infrastructure across two lanes &ndash; OmniASR (wav2vec2 + LLM-prefix) on a dedicated Nvidia&rsquo;s Triton lane and Whisper-Apex on vLLM &ndash; with a real-time audio front-end using Silero VAD for speech segmentation and DeepFilterNet noise suppression, plus bandwidth-extension stages to close a confirmed 8&rarr;16 kHz telephony audio ceiling.</li>
-          <li>Revamped the WCL stack (2G/4G/5G) and built the team's first Docker-based Apache Airflow, CI/CD-enabled orchestration &ndash; migrating pipelines between PySpark and pandas by workload profile and orchestrating 20+ ETL workflows as SME, cutting runtime 75% and compute cost 85%.</li>
+          <li>Built a production real-time voice agent for broadband field diagnostics, hitting sub-1,000 ms round-trip latency across a full STT&rarr;LLM&rarr;TTS turn-taking loop orchestrated in LangGraph; live on Airtel IQ telephony handling concurrent calls.</li>
+          <li>Fine-tuned [ASR model, 1B/3B] for Hindi/Hinglish telephony speech to 18.9% WER / 9.0% UER, via a &micro;-law + noise-augmentation pipeline that injected real noise profiles mined from in-house call recordings into clean training data to match production conditions.</li>
+          <li>Owned the ASR serving stack end to end &mdash; dual-lane inference on Triton and vLLM, with Silero VAD segmentation, DeepFilterNet suppression, and bandwidth extension to close a confirmed 8&rarr;16 kHz telephony audio ceiling.</li>
+          <li>Designed the async serving layer: FastAPI microservices, WebSocket audio streaming, and a MongoDB-backed priority queue and call state machine managing concurrent live sessions.</li>
+          <li>Rebuilt the telecom data platform (2G/4G/5G) on Docker-based Airflow with CI/CD, orchestrating 20+ PySpark/pandas ETL workflows over terabyte-scale daily broadband data &mdash; 75% faster, 85% lower compute cost.</li>
           <li>Leading nationwide Duct operations across 12+ states &ndash; a business-critical program directly affecting customer network performance, traffic, and tower/cell operations &ndash; as tech lead and primary SME/POC coordinating cross-functional teams India-wide; deployed a real-time monitoring dashboard that eliminated manual inspections and gave stakeholders instant operational visibility.</li>
           <li>Built large-scale PySpark pipelines processing terabytes of broadband customer data daily across India, generating network-health KPIs, churn signals, and CX metrics for Airtel's flagship Broadband Experience initiative.</li>
         </ul>
@@ -117,7 +118,24 @@
       </div>
     </section>
 
-    <!-- Publications section injected here by build script (from publications.html) -->
+    <section class="cv-section cv-publications">
+      <h2>Publications</h2>
+
+      <div class="item">
+        <h3><a href="https://peerj.com/articles/13380/" target="_blank">Identification of vaccine targets &amp; design of vaccine against SARS-CoV-2 coronavirus using computational and deep learning-based approaches</a></h3>
+        <div class="meta">PeerJ, May 2022</div>
+      </div>
+
+      <div class="item">
+        <h3><a href="https://www.nature.com/articles/s41598-021-96863-x" target="_blank">Identification of vaccine targets in pathogens and design of a vaccine using computational approaches</a></h3>
+        <div class="meta">Nature Scientific Reports, September 2021</div>
+      </div>
+
+      <div class="item">
+        <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3685705" target="_blank">To Study the Effect of Unconventional Treatment Protocol on COVID-19 Patients in Delhi Using Artificial Intelligence Based Methods</a></h3>
+        <div class="meta">SSRN, September 2020</div>
+      </div>
+    </section>
 
     <section class="cv-section">
       <h2>Extracurricular Activities</h2>
@@ -139,14 +157,11 @@
       <h2>Skills</h2>
       <div class="skills">
         <p><strong>Languages</strong>: Python, SQL</p>
-        <p><strong>Big Data</strong>: Apache PySpark, Pandas, Hadoop, HDFS, YARN, Delta Lake</p>
-        <p><strong>Orchestration</strong>: Apache Airflow, Docker, Docker Compose, Dagster, Jenkins, GitHub Actions, Bitbucket</p>
-        <p><strong>ML/AI</strong>: PyTorch, Transformers, HuggingFace, LangGraph, LangChain, LLMs, Speech-to-Text/Text-to-Speech (STT/TTS), ASR finetuning, OmniASR, Whisper, DeepFilterNet, Silero VAD, noise suppression</p>
-        <p><strong>Backend &amp; Web</strong>: FastAPI, Streamlit, WebSockets, Django</p>
+        <p><strong>ML/AI</strong>: PyTorch, Transformers, HuggingFace, LangGraph, LangChain, ASR fine-tuning (Whisper, [OmniASR]), Silero VAD, DeepFilterNet</p>
+        <p><strong>Serving &amp; Inference</strong>: vLLM, NVIDIA Triton, FastAPI, WebSockets, Docker</p>
+        <p><strong>Data &amp; Orchestration</strong>: PySpark, Pandas, Delta Lake, Airflow, Dagster, Jenkins, GitHub Actions</p>
         <p><strong>Databases</strong>: PostgreSQL, MongoDB</p>
-        <p><strong>Visualization</strong>: Django, Power BI, Tableau</p>
-        <p><strong>Tools</strong>: Power BI, Tableau, Git, Linux, Paramiko, AWS SageMaker</p>
-        <p><strong>Spoken</strong>: English (Proficient), Hindi (Native)</p>
+        <p><strong>Other</strong>: Git, Linux, AWS SageMaker, Django, Streamlit, Power BI</p>
       </div>
     </section>
   </div>
