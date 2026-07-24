@@ -743,7 +743,12 @@ footer {
     text-align: justify;
   }
 
-  /* Extracurricular */
+  /* Extracurricular — keep the whole section on one page */
+  .cv-extracurricular {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
   .cv-extra-item {
     margin-bottom: 0.35rem;
     break-inside: avoid;
