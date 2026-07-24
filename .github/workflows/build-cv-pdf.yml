@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'cv.html'
+      - 'publications.html'
       - 'css/**'
       - 'js/**'
       - '.github/workflows/build-cv-pdf.yml'
