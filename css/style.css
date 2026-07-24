@@ -775,12 +775,16 @@ footer {
   .skills strong { font-weight: 700; color: #000; }
 
   /* Publications entries (loaded from publications.html) — bullet list */
+  .cv-publications {
+    padding: 0;
+    margin-left: 0;
+  }
+
   .cv-publications .item {
-    display: list-item;
-    list-style: disc inside;
+    display: block;
+    position: relative;
     margin: 0 0 0.05rem 0;
     padding: 0 0 0 1.2em;
-    text-indent: -1.2em;
     border: none;
     border-radius: 0;
     background: none !important;
@@ -790,6 +794,16 @@ footer {
     line-height: 1.28;
     color: #000;
     text-align: justify;
+  }
+
+  .cv-publications .item::before {
+    content: "\2022";
+    position: absolute;
+    left: 0.3em;
+    top: 0;
+    font-size: 9.5pt;
+    line-height: 1.28;
+    color: #000;
   }
 
   .cv-publications .item h3 {
