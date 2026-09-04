@@ -49,7 +49,7 @@
 
     <section class="cv-section cv-summary">
       <h2>Summary</h2>
-      <p>Machine learning engineer focused on real-time voice AI and low-latency inference at production telecom scale. At Airtel, I own the ASR, model-serving, and async orchestration behind a live broadband voice agent on Airtel IQ, alongside the data platform powering network-health KPIs across 2G/4G/5G. Prior data-engineering work at Moody's (Dagster + weather intelligence) and Verisk (Python automation on AWS SageMaker).</p>
+      <p>Machine learning engineer specializing in <strong>real-time speech AI, low-latency inference, and production GenAI systems</strong>. At Airtel, build and deploy end-to-end voice AI systems spanning <strong>ASR fine-tuning, synthetic speech data generation, VAD/audio processing, GPU inference, and asynchronous serving</strong>, powering a live broadband voice agent on Airtel IQ. Also built a production <strong>RAG assistant over a 485K-LOC telecom codebase</strong> and large-scale PySpark data platforms processing terabytes of daily 2G/4G/5G network data.</p>
     </section>
 
     <section class="cv-section">
@@ -79,15 +79,22 @@
           <div class="cv-item-meta">Aug 2025 &ndash; Present</div>
         </div>
         <ul>
-          <li>Built a production real-time voice agent for broadband field diagnostics, hitting sub-1,000 ms round-trip latency across a full STT-&gt;LLM-&gt;TTS turn-taking loop orchestrated in LangGraph; live on Airtel IQ telephony handling concurrent calls.</li>
-          <li>Fine-tuned NVIDIA Nemotron ASR (FastConformer CTC/RNN-T) on IndicVoices and NPTEL, cutting WER 35%-&gt;19% (Hindi) and 40%-&gt;14% (English), with code-switching handled in a single model.</li>
-          <li>Fine-tuned Meta's Omnilingual ASR (1B/3B LLM variants) and Whisper-Hindi2Hinglish-Apex for Hindi/Hinglish telephony to 18.9% WER / 9.0% UER, via a &micro;-law + noise-augmentation pipeline injecting real noise profiles mined from in-house call recordings into clean training data.</li>
-          <li>Owned the ASR serving stack end to end: sherpa-onnx export, dual-lane inference on Triton and vLLM, with Silero VAD segmentation, DeepFilterNet suppression, and bandwidth extension to close a confirmed 8-&gt;16 kHz telephony audio ceiling.</li>
-          <li>Designed the async serving layer: FastAPI microservices, WebSocket audio streaming, and a MongoDB-backed priority queue and call state machine managing concurrent live sessions.</li>
-          <li>Rebuilt the telecom data platform (2G/4G/5G) on Docker-based Airflow with CI/CD, orchestrating 20+ PySpark/pandas ETL workflows over terabyte-scale daily broadband data - 75% faster, 85% lower compute cost.</li>
-          <li>Leading nationwide Duct operations across 12+ states - a business-critical program directly affecting customer network performance, traffic, and tower/cell operations - as tech lead and primary SME/POC coordinating cross-functional teams India-wide; deployed a real-time monitoring dashboard that eliminated manual inspections and gave stakeholders instant operational visibility.</li>
-          <li>Built large-scale PySpark pipelines processing terabytes of broadband customer data daily across India, generating network-health KPIs, churn signals, and CX metrics for Airtel's flagship Broadband Experience initiative.</li>
-        </ul>
+  <li>Built and deployed a <strong>production real-time voice agent</strong> for broadband field diagnostics, orchestrating VAD &rarr; STT &rarr; LLM &rarr; TTS turn-taking in LangGraph; achieved <strong>sub-1,000 ms round-trip latency</strong> on Airtel IQ telephony while supporting concurrent live calls.</li>
+
+  <li>Built a <strong>60+ hour synthetic Hindi-English code-switched telecom speech corpus</strong> using Indic TTS across diverse speaker personas, intents, and domain-specific utterances; developed a production-matched degradation pipeline with G.711 &micro;-law encoding, 8 kHz band-limiting, and probabilistic real-noise augmentation at 10&ndash;28 dB SNR to close the acoustic gap between training and telephony inference.</li>
+
+  <li>Fine-tuned <strong>NVIDIA Nemotron's cache-aware streaming RNN-T ASR</strong> on synthetic + real telecom speech, achieving <strong>7% English / 14% Hindi WER</strong> on code-switched telephony; deployed the model on GPU via sherpa-onnx for low-latency streaming inference.</li>
+
+  <li>Fine-tuned <strong>Meta Omnilingual ASR 1B/3B LLM variants</strong> on the same telecom-domain corpus, achieving <strong>9% English / 16% Hindi WER</strong> on code-switched telephony; deployed Omnilingual ASR on NVIDIA Triton for production inference and evaluated model/serving trade-offs across architectures.</li>
+
+  <li>Owned the <strong>production speech-inference stack end to end</strong>, integrating Silero VAD, DeepFilterNet denoising, bandwidth extension, 8 kHz telephony preprocessing, FastAPI/WebSockets streaming, and a MongoDB-backed priority queue + call-state machine for concurrent live-session orchestration and low-latency audio processing.</li>
+
+  <li>Built and deployed a <strong>production RAG assistant for Airtel's Duct and VoLTE Steering systems</strong>, indexing a <strong>485K-LOC telecom codebase into 17K AST-aware function chunks</strong> across 25 circles/states alongside 300+ Confluence documents; implemented BGE-M3 embeddings, Qdrant retrieval, BGE-reranker-v2-M3, and a self-hosted Qwen LLM on H100/vLLM to deliver streaming, grounded, source-cited answers to engineers.</li>
+
+  <li>Rebuilt Airtel's <strong>2G/4G/5G telecom data platform</strong>, migrating 20+ PySpark/pandas ETL workflows to Dockerized Airflow with CI/CD and processing terabyte-scale daily broadband data; improved pipeline throughput by <strong>75%</strong> while reducing compute cost by <strong>85%</strong>, powering network-health KPIs, churn signals, and CX analytics.</li>
+
+  <li>Led <strong>nationwide Duct operations across 12+ states</strong> as technical lead and primary SME/POC for a business-critical program impacting customer network performance, traffic, and tower/cell operations; coordinated cross-functional teams and deployed real-time monitoring that eliminated manual inspections and provided stakeholders with live operational visibility.</li>
+</ul>
       </div>
 
       <div class="cv-item">
@@ -100,11 +107,14 @@
           <div class="cv-item-meta">Apr 2023 &ndash; Aug 2025</div>
         </div>
         <ul>
-          <li>Architected an end-to-end data orchestration framework on Dagster, integrating high-frequency weather data from 30+ global sources with CI/CD automation via Jenkins and GitHub Actions, improving pipeline efficiency by 90%.</li>
-          <li>Implemented a Django-based data visualization dashboard using Mapbox, JavaScript, MongoDB, and Python, enabling global wind station tracking and cross-referencing with the Postgres database to identify over 18,000 missing stations</li>
-          <li>Collaborated with the Event Response team to automate Support Center uploads via an API, reducing manual upload time from 40&ndash;60 minutes to zero, enhancing efficiency for natural disaster reports and forecasts</li>
-          <li>Unlocked Visibility into HWind processes by building insightful statistics dashboard using JavaScript, Python, and Django, tracking daily and weekly data feed counts with interactive charts, identifying any problematic data transactions and feed downtimes.</li>
-        </ul>
+  <li>Architected an end-to-end data orchestration framework on Dagster, integrating high-frequency weather data from 30+ global sources with CI/CD automation via Jenkins and GitHub Actions, <strong>improving pipeline efficiency by 90%</strong>.</li>
+
+  <li>Implemented a Django-based data visualization dashboard using Mapbox, JavaScript, MongoDB, and Python, enabling global wind station tracking and cross-referencing with the Postgres database to <strong>identify over 18,000 missing stations</strong>.</li>
+
+  <li>Collaborated with the Event Response team to <strong>automate Support Center uploads via an API</strong>, reducing manual upload time from 40&ndash;60 minutes to <strong>zero</strong> and enhancing efficiency for natural disaster reports and forecasts.</li>
+
+  <li>Unlocked visibility into HWind processes by building an <strong>operational statistics dashboard</strong> using JavaScript, Python, and Django, tracking daily and weekly data-feed counts and identifying problematic transactions and feed downtimes.</li>
+</ul>
       </div>
 
       <div class="cv-item">
@@ -117,11 +127,14 @@
           <div class="cv-item-meta">Nov 2021 &ndash; Apr 2023</div>
         </div>
         <ul>
-          <li>Enhanced data collection and processing pipelines in Python on AWS SageMaker, improving efficiency by 60%</li>
-          <li>Built Python automation scripts to extract oil price data from country reports, update Excel deliverables, and trigger email notifications on completion, reducing end-to-end processing time by 90%.</li>
-          <li>Led project handover sessions with different teams, managed project roadmaps, story allocation, and task division using JIRA</li>
-          <li>Crafted a Power BI dashboard to monitor JIRA tickets and track completion statistics, fostering team accountability and ensuring timely task fulfillment; implemented JIRA tickets for day-to-day tasks assigned to individual team members</li>
-        </ul>
+  <li>Enhanced <strong>data collection and processing pipelines in Python on AWS SageMaker</strong>, improving efficiency by <strong>60%</strong>.</li>
+
+  <li>Built Python automation to extract oil-price data from country reports, update Excel deliverables, and trigger email notifications on completion, <strong>reducing end-to-end processing time by 90%</strong>.</li>
+
+  <li>Led <strong>project handover sessions and roadmap execution</strong> across teams, managing story allocation and task division using JIRA.</li>
+
+  <li>Crafted a Power BI dashboard to <strong>monitor JIRA workload and completion statistics</strong>, improving team accountability and visibility into task fulfillment.</li>
+</ul>
       </div>
     </section>
 
@@ -148,13 +161,19 @@
     <section class="cv-section">
       <h2>Skills</h2>
       <div class="skills">
-        <p><strong>Languages</strong>: Python, SQL</p>
-        <p><strong>Speech &amp; ASR</strong>: NVIDIA NeMo, Whisper, Meta Omnilingual ASR (1B/3B), Nemotron/FastConformer, sherpa-onnx, Silero VAD, DeepFilterNet</p>
-        <p><strong>ML/AI</strong>: PyTorch, Transformers, HuggingFace, PEFT/LoRA, LangGraph, LangChain</p>
-        <p><strong>Serving &amp; Inference</strong>: vLLM, NVIDIA Triton, ONNX Runtime, FastAPI, WebSockets, Docker, CUDA</p>
-        <p><strong>Data &amp; Orchestration</strong>: PySpark, Pandas, Delta Lake, Airflow, Dagster, Jenkins, GitHub Actions</p>
-        <p><strong>Databases</strong>: PostgreSQL, MongoDB</p>
-        <p><strong>Other</strong>: Git, Linux, AWS SageMaker, Streamlit</p>
+          <p><strong>Languages</strong>: Python, SQL</p>
+
+          <p><strong>Speech &amp; ASR</strong>: NVIDIA NeMo, Nemotron, FastConformer RNN-T, Meta Omnilingual ASR (1B/3B), Whisper, Indic TTS, sherpa-onnx, Silero VAD, DeepFilterNet, PyTorch Audio</p>
+
+          <p><strong>ML &amp; GenAI</strong>: PyTorch, HuggingFace Transformers, PEFT/LoRA, LangGraph, LangChain, RAG, BGE-M3, BGE-reranker-v2-m3, AST-based code retrieval</p>
+
+          <p><strong>Serving &amp; Inference</strong>: NVIDIA Triton, vLLM, ONNX Runtime, FastAPI, WebSockets, Docker, CUDA, GPU inference, Streaming Inference</p>
+
+          <p><strong>Data &amp; Orchestration</strong>: PySpark, Pandas, Airflow, Delta Lake, ETL/ELT, CI/CD, Jenkins, GitHub Actions</p>
+
+          <p><strong>Vector Search &amp; Databases</strong>: Qdrant, MongoDB, PostgreSQL</p>
+
+          <p><strong>Infrastructure &amp; Tools</strong>: Linux, Git, AWS SageMaker, Streamlit</p>
       </div>
     </section>
   </div>
