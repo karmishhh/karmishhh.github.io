@@ -1,26 +1,26 @@
-// Dark mode toggle
+// Colour scheme toggle — warm black (default) / cream
 (function () {
   const saved = localStorage.getItem('theme');
-  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  document.documentElement.setAttribute('data-theme', saved === 'light' ? 'light' : 'dark');
 
   document.addEventListener('DOMContentLoaded', function () {
     const btn = document.querySelector('.theme-toggle');
     if (!btn) return;
 
-    function updateIcon() {
-      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
-      btn.textContent = dark ? '\u2600' : '\u263E';
-      btn.title = dark ? 'Switch to light mode' : 'Switch to dark mode';
+    function updateLabel() {
+      const light = document.documentElement.getAttribute('data-theme') === 'light';
+      btn.textContent = light ? 'Dark' : 'Cream';
+      btn.title = light ? 'Switch to warm black' : 'Switch to cream';
     }
 
-    updateIcon();
+    updateLabel();
 
     btn.addEventListener('click', function () {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const next = isDark ? 'light' : 'dark';
+      const light = document.documentElement.getAttribute('data-theme') === 'light';
+      const next = light ? 'dark' : 'light';
       document.documentElement.setAttribute('data-theme', next);
       localStorage.setItem('theme', next);
-      updateIcon();
+      updateLabel();
     });
   });
 })();
